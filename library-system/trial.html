@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="trial.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Simple Library System</h1>
+    </header>
+    <main>
+      <div class="button-container">
+        <button id="toggle-form" class="toggle-btn">Add New Book</button>
+      </div>
+
+      <section class="add-book-section" style="display:none">
+        <h2>Add New Book</h2>
+        <form id="book-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" required />
+            </div>
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <input type="text" id="author" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="type">Book Type:</label>
+            <select id="type">
+              <option value="physical">Physical Book</option>
+              <option value="ebook">E-Book</option>
+            </select>
+          </div>
+          <div id="ebook-details" class="form-group" style="display: none">
+            <label for="fileSize">File Size (MB):</label>
+            <input type="number" id="fileSize" min="1" value="1" />
+          </div>
+          <button type="submit" class="btn-primary">Add Book</button>
+        </form>
+      </section>
+
+      <section class="library-section">
+        <h2>Book Collection</h2>
+        <div id="book-list" class="book-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="trial.js"></script>
+</body>
+
+</html>
